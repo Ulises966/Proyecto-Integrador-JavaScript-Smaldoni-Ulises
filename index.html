@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/animations.css">
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+
+    <script src="https://kit.fontawesome.com/8e7cd8452f.js" crossorigin="anonymous"></script>
+
+    <title>U watch</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">
+        <img src="./assets/img/logo.png" alt="logo" class="header__logo">
+        </a>
+
+        <nav class="header__navbar">
+            <div class="menu-label">
+                <label for="menu-toggle">
+                    <i class="fa-solid fa-bars-staggered menu-icon"></i>
+                </label>
+                <input type="checkbox" id="menu-toggle">
+            </div>  
+
+            <div class="navbar__menu">
+
+                <ul class="navbar__list">
+                    <li><a class="nav-link" href="#hero">Home</a></li>
+                    <li><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li><a class="nav-link" href="#products">Productos</a></li>
+                    <li><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li><a class="nav-link" href="#footer">Soporte</a></li>
+               </ul>     
+                
+            </div>
+
+            <div class="header__register">
+                <!-- <a class="register--btn hover-btn" href="./register.html">Registrate</a> -->
+                <a href="./login.html" class="login__btn"> 
+                <span></span> 
+                <i class="fa-solid fa-circle-user login__btn--icon"></i>    
+                </a>    
+            </div>  
+
+            <div class="cart-icon-container">
+                <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                <div class="cart-bubble">0</div>
+            </div>
+
+
+            <div class="cart">
+                <h3>Tus productos</h3>
+
+                <div class="cart-container">
+
+
+                </div>
+
+                <div class="cart-total">
+                    <p>Total:</p> <span class="total"></span>
+                </div>
+                <div class="btn-buy-delete">
+                    <button class="buy"> Comprar </button>
+                    <button class="delete"> Vaciar </button>
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+
+        </nav>    
+
+    
+    </header>
+
+    <main>
+        <section id="hero">
+
+            <div class="hero-content">
+
+                
+                <div class="hero-images">
+                    <div class="img-up">
+                        <div class="hero-img1">  </div>
+                        <div class="hero-img2">  </div>
+                    </div> 
+                    <div class="hero__info">
+                        <h1>Hace que el tiempo fluya con estilo en U Watch</h1> 
+                        <button class="button-hero" role="button">
+                            <a href="#products" class="text">conoce nuestros productos</a>
+                        </button>               
+                    </div> 
+                    <div class="img-down">   
+                        <div class="hero-img3">  </div>
+                        <div class="hero-img4">  </div>
+                    </div>        
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section id="servicios">
+
+            <h2> Nos caracteriza la atencion y cuidado de nuestros productos </h2>
+            
+            <div class="servicios__container">
+                <div class="servicios-info">
+                    <div class="servicios-img">
+                        <img src="./assets/img/envio.png" alt="imagen de envio">
+                    </div>
+                    <p>Envio gratis y seguro a todo el pais</p>
+                </div>
+
+                <div class="servicios-info">
+                    <div class="servicios-img">
+                        <img src="./assets/img/garantia.png" alt="imagen reloj garantia">
+                    </div>
+                    <p>Garantia oficial del fabricante en todas las marcas</p>
+                </div>
+
+                <div class="servicios-info">
+                    <div class="servicios-img">
+                        <img src="./assets/img/tarjetas.png" alt="tarjetas">
+                    </div>
+                    <p>hasta 6 coutas sin interes con todas las tarjetas</p>
+                </div>
+                  
+            </div>
+
+        </section>
+
+        <section id="products">
+            
+
+
+            <h4>Nuestros porductos </h4>
+
+            <div class="List-categories">
+                <button class="category hover-btn active">Todos</button>
+                <button class="category hover-btn" data-category="hombre">Hombre</button>
+                <button class="category hover-btn" data-category="mujer">Mujer</button>
+                <button class="category hover-btn" data-category="digital">Digital</button>
+                <button class="category hover-btn" data-category="smartwatch">Smartwatch</button>
+            </div>
+
+            <div class="products__container">
+              
+
+            </div> 
+
+            <button class="btn-more">Ver Más</button>
+
+        </section>
+
+        <section id="contact">
+            <div class="contact__content">
+
+                <div class="contact__mensaje">
+                    <h5>
+                        Envianos tu consulta
+                    </h5>
+                    <div class="contact__mensaje--textarea">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre"/>
+                
+                        <label for="email">Correo:</label>
+                        <input type="email" id="email" placeholder="@gmail.com"/>
+                    
+                        <label for="mensaje"></label>
+                        <textarea name="mensaje" id="mensaje" cols="10" rows="8" placeholder="Dejanos un mensaje"></textarea>
+                
+                        <a class="hover-btn" href="#contacto">Enviar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__maps">
+                <h5>
+                    Acercate a nuestro local
+                </h5>
+                
+                <div class="contact__location">
+
+                    <div class="location--icon">
+                        <i class="fa-solid fa-map-location"></i> 
+                        <span> Calle falsa 96. Córdoba Capital. Argentina</span>
+                    </div>
+                
+                </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.1411715046434!2d-64.18202592649135!3d-31.417766782880342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329902eb0b2faf%3A0x4382bb478dc6e982!2sPlaza%20San%20Mart%C3%ADn!5e0!3m2!1ses!2sar!4v1690577516598!5m2!1ses!2sar" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer__container">
+            <div class="footer__soporte">
+                <h6>Contacto de soporte</h6>
+
+                <div class="soporte__data">
+                    <div class="data--estilo">
+                        <i class="fa-solid fa-square-phone"></i>
+                        <span>+54 9 (0351) 4646464</span>
+                    </div>    
+                    <div class="data--estilo">
+                        <i class="fa-solid fa-square-envelope"></i>
+                        <span>uwatche@mail.com</span>
+                    </div>    
+                    <div class="data--estilo">
+                        <a href="https://web.whatsapp.com/" target="_blank"> <img src="./assets/img/img-redes/whatsapp.png" alt="whatsapp"> </a>
+                        <span>+54 9 (351) 9666666</span>
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <div class="footer__redes">
+                <h6>Seguinos en nuestras redes</h6>
+                <div class="redes--icon">
+                    <a href="https://es-la.facebook.com/" target="_blank"> <img  src="./assets/img/img-redes/facebook.png" alt="facebook"> </a>
+                    <a href="https://www.instagram.com/" target="_blank"> <img  src="./assets/img/img-redes/instagram.png" alt="instagram"> </a>
+                    <a href="https://www.youtube.com/" target="_blank"> <img  src="./assets/img/img-redes/youtube.png" alt="youtube"> </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/data.js"></script>
+    <script src="./assets/index.js"></script>  
+</body>
+</html>

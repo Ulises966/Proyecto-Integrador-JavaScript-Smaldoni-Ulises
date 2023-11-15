@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Playfair Display', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    color: #353535;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+:root {
+
+    --bg-main: #eef2f3;
+    --bg-footer: #eef2f3;
+    --bg-header: #eef2f3;
+    --login-text: #ffda74;
+    --title-text: #ffda74;
+    /* --text-secondary: #ef4565; */
+    --text-secondary: #ffda74;
+    --text-navbar-link: #353535;
+    --paragraph: #353535;
+    --paragraph-scnd: #353535;
+    --paragraph-card: #353535;
+    --title-card: #5a5a5a;
+    --title-scnd: #353535;
+    --text-input: #353535;
+    --bg-placeholder: #fff6c3; 
+    --bg-ph-focus: #eefcf7;
+    --text-span: #353535;
+    --text-trd: #353535;
+    --btn-trd: #ffda74;
+}
+
+
+
+
+
+

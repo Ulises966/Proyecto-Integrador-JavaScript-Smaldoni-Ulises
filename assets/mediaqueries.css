@@ -1,0 +1,200 @@
+
+@media (max-width: 1400px) {
+    .navbar__menu {
+        gap: 100px;
+    }
+    .hero__info--container {
+        gap: 110px;
+    }   
+}
+@media (max-width: 1366px) {
+    .hero__info {
+        gap: 50px;
+    }
+    .hero__info--container {
+        gap: 80px;
+    }   
+}
+@media (max-width: 1200px) {
+    .navbar__menu {
+        gap: 70px;
+    }
+    .navbar__list {
+        gap: 20px;
+    }
+    .hero__info--container {
+        gap: 50px;
+    }
+    #contact {
+        gap: 150px;
+    }
+    .footer__container {
+        gap: 300px;
+    }
+}
+@media (max-width: 1070px) {
+    .navbar__menu {
+        gap: 40px;
+    }
+    .hero__info--container {
+        flex-direction: column;
+    }
+    .hero__info h1 {
+        font-size: 40px;
+    }
+    #contact {
+        gap: 120px;
+    }
+    .footer__container {
+        gap: 200px;
+    }   
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .menu-label {
+        display: flex;
+    }
+    .menu-label i {
+        cursor: pointer;
+        font-size: 24px;
+        color: var(--login-text);
+    }
+
+    .navbar__menu {
+        position: absolute;
+        top: 70px;
+        left: 0%;
+        right: 0%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center; 
+        backdrop-filter: blur(16px) saturate(200%);
+        -webkit-backdrop-filter: blur(16px) saturate(200%);
+        background-color: #8e9eab86;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        border-top: none;
+        border-radius: 0px 0px;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 30px;
+        z-index: 2;
+        display: none;
+        transform: translatex(100%);
+        opacity: 0;
+        animation: fade 1.0s ease-in-out forwards, slide-menu 1.0s ease-in-out forwards;
+    }  
+    
+    .navbar__list,
+    .header__register {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }    
+
+    /* se agrega la clase show menu a l navbar para desplegar en el evento click */
+    .show-menu {
+        display: flex;
+    }
+
+    /* hasta aqui estilos icon navbar y evento click  */
+
+    .hero__info {
+        gap: 40px;
+    }
+    .hero__info h1 {
+        font-size: 30px;
+    }
+    .hero__info--container {
+        gap: 20px;
+    }
+    .hero__info--content {
+        gap: 20px;
+    }
+    .hero__info--content p {
+        font-size: 18px;
+    }
+    .hero__info--content a {
+        font-size: 16px;
+    }
+    .container--img img {
+        width: 280px;
+    }
+    .hero-ilustration img {
+        width: 80%;
+    }
+
+    #contact {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .footer__container {
+        gap: 100px;
+    }   
+}
+@media (max-width: 768px) {
+    .hero__titulo {
+        flex-direction: column;
+    }
+    .button-hero {
+        font-size: 24px;
+        min-width: 196px;
+    }
+    .hero-ilustration img {
+        width: 50%;
+    }
+    .servicios__container {
+        flex-direction: column;
+        gap: 30px;
+
+}
+@media (max-width: 576px) {
+    .header__logo {
+        width: 50%;
+    }
+    #hero {
+        padding: 5px;
+    }
+    .hero__info {
+        gap: 30px;
+    }
+    .hero__info h1 {
+        font-size: 26px;
+    }
+    .hero__info--container {
+        gap: 10px;
+    }
+    .hero__info--content {
+        gap: 10px;
+    }
+    .hero__info--content p {
+        font-size: 16px;
+    }
+    .hero__info--content a {
+        font-size: 16px;
+    }
+    .container--img img {
+        width: 200px;
+    }
+    #servicios h2 {
+        font-size: 20px;
+    }
+    .contact__maps iframe {
+        width: 250px;
+        height: 250px;
+    }
+    .contact__mensaje--textarea input {
+        width: 250px;
+    }    
+    .contact__mensaje--textarea textarea {
+        width: 250px;
+    }
+    .contact__mensaje--textarea a {
+        width: 250px;
+    }
+    
+}
+}

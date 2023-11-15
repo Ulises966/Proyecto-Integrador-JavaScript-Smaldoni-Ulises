@@ -1,0 +1,90 @@
+
+.navbar__list li:hover {
+    color: var(--text-secondary);
+    transition: all 0.3s ease-in;
+    transform: scale(1.1);
+}
+.navbar__list li a:hover {
+    color: var(--text-secondary);
+    transition: all 0.4s ease-in;
+}
+.hover-btn:hover {
+    transform: scale(0.95);
+    transition: all 0.5s ease-in;
+}
+
+
+
+@keyframes translateIzq {
+  0% { 
+    transform: translatex(-100px);
+  }
+  100%{ 
+    transform: translatex(0px);
+  }
+}
+@keyframes translateDer {
+  0% { 
+    transform: translatex(100px);
+  }
+  100%{ 
+    transform: translatex(0px);
+  }
+}
+@keyframes inputs-slide {
+  0% { 
+    transform: translatey(14px);
+  }
+  100%{ 
+    transform: translatey(0px);
+  }
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    }
+}
+@keyframes slide-menu {
+  0% { 
+    transform: translatex(100%);
+  }
+  100%{ 
+    transform: translatex(0%);
+  }
+}
+
+
+.hero-img1 {
+    opacity: 0;
+    animation: fade 2s ease-in forwards ;
+}
+.hero-img2 {
+    opacity: 0;
+    animation: fade 5s ease-in forwards ;
+}
+.hero-img3 {
+    opacity: 0;
+    animation: fade 4s ease-in forwards ;
+}
+.hero-img4 {
+    opacity: 0;
+    animation: fade 3s ease-in forwards ;
+}
+
+
+/* .slide1 {
+    animation: translateDer 5s;
+}
+.slide2 {
+    animation: translateIzq 5s;
+}
+.input-slide {  
+    animation: inputs-slide 1.5s;
+}
+.input-slide2 {  
+    animation: inputs-slide 2s;
+} */
