@@ -13,6 +13,7 @@ const totalcontent = document.querySelector('.total');
 const bubbleCart = document.querySelector('.cart-bubble')
 const buttonBuy = document.querySelector('.buy');
 const buttonDelete = document.querySelector('.delete');
+const offerContainer = document.querySelector('.products-offer__container');
 
 
 
@@ -30,17 +31,48 @@ const saveCart = () => {
 // funciones render products
 
 const createProductTemplate = (product) => {
-    const { id, name, price, cardImg } = product
-    return `
-    <div class="container__card">
-        <div class="card--content">
-            <div class="card--img">
-                <img src="${cardImg}" alt="${name}">
+    const { id, name, price, cardImg, category } = product;
+    
+    if (category.includes('offer')) {
+        const precioOriginal = parseFloat(price);
+        const descuento = precioOriginal * 0.15;
+        const precioConDescuento = (precioOriginal - descuento).toFixed(3);
+
+        return `
+        <div class="container__card">
+            <div class="card--content">
+                <div class="card--img">
+                    <img src="${cardImg}" alt="${name}">
+                </div>
+                <div class="card--text">
+                    <h5>${name}</h5>
+                    <div class="price-offer">
+                        <p>$ ${precioOriginal.toFixed(3)}</p>
+                        <span>$ ${precioConDescuento}</span>
+                    </div>
+                </div>
+                <button class="card--btn"
+                    data-id='${id}'
+                    data-name='${name}'
+                    data-price='${precioConDescuento}'
+                    data-img='${cardImg}'>
+                    Comprar
+                </button>
             </div>
-            <div class="card--text">
-                <h5> ${name} </h5>
-                <p>$ ${price}</p>
-            </div>
+        </div>
+        `;
+    } else {
+        
+        return `
+        <div class="container__card">
+            <div class="card--content">
+                <div class="card--img">
+                    <img src="${cardImg}" alt="${name}">
+                </div>
+                <div class="card--text">
+                    <h5>${name}</h5>
+                    <p>$ ${price}</p>
+                </div>
                 <button class="card--btn"
                     data-id='${id}'
                     data-name='${name}'
@@ -48,10 +80,13 @@ const createProductTemplate = (product) => {
                     data-img='${cardImg}'>
                     Comprar
                 </button>
+            </div>
         </div>
-    </div>
-    `
-}
+        `;
+    }
+};
+
+
 
 const renderProducts = (productsList) => {
     productsContainer.innerHTML += productsList
@@ -340,6 +375,68 @@ const disableBtn = (btn) => {
         btn.classList.add('disable');
     }
 }
+
+// logica filtrado y render productos destacados ofertas
+
+const ProductosDestacados = () => {
+    const productsOffer = productsData.filter(producto => producto.category.includes('offer'));
+
+    if (productsOffer.length === 0) {
+        offerContainer.innerHTML = '<p>No hay productos destacados disponibles</p>';
+        return;
+    }
+
+    const renderProductsOffer = productsOffer.map(producto => {
+        const precioOriginal = parseFloat(producto.price);
+        const descuento = precioOriginal * 0.15;
+        const precioConDescuento = (precioOriginal - descuento).toFixed(2);
+
+        return `
+            <div class="products-offer-card">
+            <div class="offer-badge">15% off</div>
+            <img src="${producto.cardImg}" alt="${producto.name}" />
+            <h5>${producto.name}</h5>
+            <div class="price-offer">
+                <p>$ ${precioOriginal.toFixed(2)}</p>
+                <span>$ ${precioConDescuento}</span>
+            </div>
+            <button class="card--btn"
+                data-id='${producto.id}'
+                data-name='${producto.name}'
+                data-price='${precioConDescuento}'
+                data-img='${producto.cardImg}'>
+                Comprar
+            </button>
+        </div>
+        `;
+    }).join('');
+
+    offerContainer.innerHTML = renderProductsOffer;
+
+    const buttonsBuy = document.querySelectorAll('.products-offer-card .card--btn');
+    buttonsBuy.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+};
+
+const addToCart = (e) => {
+    const product = {
+        id: e.target.dataset.id,
+        name: e.target.dataset.name,
+        price: e.target.dataset.price,
+        cardImg: e.target.dataset.img,
+    };
+
+    if (cartProductExist(product)) {
+        addUnit(product);
+    } else {
+        createCartProduct(product);
+    }
+
+    updateCart();
+};
+
+ProductosDestacados();
 
 
 

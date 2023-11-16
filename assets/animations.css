@@ -2,15 +2,21 @@
 .navbar__list li:hover {
     color: var(--text-secondary);
     transition: all 0.3s ease-in;
-    transform: scale(1.1);
 }
 .navbar__list li a:hover {
     color: var(--text-secondary);
-    transition: all 0.4s ease-in;
+    transition: all 0.3s ease-in;
 }
 .hover-btn:hover {
     transform: scale(0.95);
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
+}
+.cart-icon:hover {
+  color: #6ce699;
+  transition: all 0.2s ease-in;
+}
+.btn-more:hover {
+  color: #ffda74;  
 }
 
 
@@ -76,7 +82,7 @@
 }
 
 
-/* .slide1 {
+.slide1 {
     animation: translateDer 5s;
 }
 .slide2 {
@@ -87,4 +93,4 @@
 }
 .input-slide2 {  
     animation: inputs-slide 2s;
-} */
+}

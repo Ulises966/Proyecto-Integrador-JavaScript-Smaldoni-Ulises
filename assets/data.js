@@ -2,21 +2,21 @@ const productsData = [
     {
         id: 1,
         name: "Casio digital plata",
-        category: "digital",
+        category: ["digital", "offer"],
         price: '50.000',
         cardImg: "./assets/img/products/casio-digital.png",
     },
     {
         id: 2,
         name: "Rolex oro",
-        category: "hombre",
+        category: ["hombre", "offer"],
         price: '700.000',
         cardImg: "./assets/img/products/hombre-malla-cuero1.png",
     },
     {
         id: 3,
         name: "Michael Kors plata",
-        category: "hombre",
+        category: "hombre", 
         price: '450.000',
         cardImg: "./assets/img/products/hombre-malla-cuero2.png",
     },
@@ -100,7 +100,7 @@ const productsData = [
     {
         id: 15,
         name: "Apple watch azul",
-        category: "smartwatch",
+        category: ["smartwatch", "offer"],
         price: '500.000',
         cardImg: "./assets/img/products/smartwatch1.png",
     },
