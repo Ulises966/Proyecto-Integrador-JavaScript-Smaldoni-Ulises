@@ -154,19 +154,47 @@ setBtnShowMore = () => {
 
 // mostrar productos filtrados 
 
+// renderProductsfilter = () => {
+//     const { activeFilter, currentProductsIndex, products } = appState
+//     productsContainer.innerHTML = '';
+//     if(!activeFilter) {
+//         appState.currentProductsIndex = 0;
+//         renderProducts(products[currentProductsIndex]);
+//         return;
+//     }
+//     const productsFilter = productsData.filter(
+//         (product) => product.category === activeFilter 
+//     );
+//     renderProducts(productsFilter);
+// }
+
 renderProductsfilter = () => {
-    const { activeFilter, currentProductsIndex, products } = appState
+    const { activeFilter, currentProductsIndex, products } = appState;
     productsContainer.innerHTML = '';
-    if(!activeFilter) {
+
+    if (!activeFilter) {
         appState.currentProductsIndex = 0;
         renderProducts(products[currentProductsIndex]);
         return;
     }
-    const productsFilter = productsData.filter(
-        (product) => product.category === activeFilter 
-    );
-    renderProducts(productsFilter);
+
+    let filteredProducts = [];
+
+    if (activeFilter === 'digital' || activeFilter === 'smartwatch') {
+        filteredProducts = productsData.filter(
+            (product) => product.category.includes(activeFilter)
+        );
+    } else {
+        filteredProducts = productsData.filter(
+            (product) => product.category === activeFilter
+        );
+    }
+
+    renderProducts(filteredProducts);
 }
+
+
+
 
 // menu hamburguesa 
 
@@ -394,7 +422,9 @@ const ProductosDestacados = () => {
         return `
             <div class="products-offer-card">
             <div class="offer-badge">15% off</div>
+            <div class="offer-img-contain">
             <img src="${producto.cardImg}" alt="${producto.name}" />
+            </div>
             <h5>${producto.name}</h5>
             <div class="price-offer">
                 <p>$ ${precioOriginal.toFixed(2)}</p>
@@ -452,6 +482,8 @@ const init = () => {
     overlay.addEventListener('click', overlayClick);
     navbarMenu.addEventListener('click', closeMenu);
     window.addEventListener('scroll', closeOnScroll);
+
+    
     window.addEventListener('DOMContentLoaded', renderCart);
     window.addEventListener('DOMContentLoaded', cartTotal);
     productsContainer.addEventListener('click', addProduct);
