@@ -135,11 +135,11 @@ header {
     align-items: center;
     position: absolute;
     top: 70px;
-    left: 70%;
+    left: 50%;
     right: 0%;
-    width: 30%;
+    width: 50%;
     height: 100vh;
-    gap: 20px;
+    gap: 30px;
     padding: 30px 30px;
     z-index: 2;
     backdrop-filter: blur(16px) saturate(200%);
@@ -221,8 +221,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 230px;
+    width: 170px;
+    height: 200px;
     gap: 20px;
     background-color: #2323234e;
     padding: 10px;
@@ -327,7 +327,7 @@ main {
 
 #hero {
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 100vh;
@@ -345,7 +345,7 @@ main {
     justify-content: center;
     flex-direction: row;
     max-width: 100vw;
-    height: 700px;
+    height: 100vh;
     padding: 15px;
     gap: 80px;
 }
@@ -495,7 +495,7 @@ main {
 #servicios {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 100vw;
     padding: 100px 20px;
     gap: 100px;
 }
@@ -597,8 +597,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    padding: 70px 20px;
+    max-width: 100vh;
+    padding: 70px 0px;
     gap: 100px;
 }
 #products h4 {
@@ -614,7 +614,7 @@ main {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 20px;
 }
 
 .container__card {
@@ -698,7 +698,7 @@ main {
 }
 
 .products-offer__container {
-    padding: 40px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
