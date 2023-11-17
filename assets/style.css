@@ -54,7 +54,7 @@ header {
 .navbar__list li a {
     color: var(--text-navbar-link);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .header__register {
