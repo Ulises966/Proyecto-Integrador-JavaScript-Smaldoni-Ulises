@@ -221,11 +221,13 @@ const closeMenu = (e) => {
 }
 
 // cerrar ventanas al scrollear 
+
 const closeOnScroll = () => {
     navbarMenu.classList.remove('show-menu');
     cartMenu.classList.remove('show-cart');
     overlay.classList.remove('show-overlay');
 }
+
 
 
 
