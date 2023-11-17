@@ -154,19 +154,6 @@ setBtnShowMore = () => {
 
 // mostrar productos filtrados 
 
-// renderProductsfilter = () => {
-//     const { activeFilter, currentProductsIndex, products } = appState
-//     productsContainer.innerHTML = '';
-//     if(!activeFilter) {
-//         appState.currentProductsIndex = 0;
-//         renderProducts(products[currentProductsIndex]);
-//         return;
-//     }
-//     const productsFilter = productsData.filter(
-//         (product) => product.category === activeFilter 
-//     );
-//     renderProducts(productsFilter);
-// }
 
 renderProductsfilter = () => {
     const { activeFilter, currentProductsIndex, products } = appState;
