@@ -8,7 +8,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    padding: 10px 50px;
+    padding: 10px 40px;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -337,6 +337,12 @@ main {
     background-image: url(./img/hero-background.jpg);
     background-position: center;
     background-size: cover;
+}
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 }
 
 .hero__info {
