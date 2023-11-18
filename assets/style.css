@@ -334,7 +334,6 @@ main {
     height: 100vh;
     margin-top: 70px;
     padding: 20px;
-    gap: 20px;
     background-image: url(./img/hero-background.jpg);
     background-position: center;
     background-size: cover;
@@ -519,8 +518,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
 }
 .servicios-img img {
     width: 70%;
@@ -691,12 +690,11 @@ main {
     padding: 30px 0px 30px 0px ;
     display: flex;
     justify-content: center;
-    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
     gap: 40px;
-    width: 100vw;
     border-top: dotted 10px #7bffab62;
     border-bottom: dotted 10px #7bffab62;
 }
