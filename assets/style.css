@@ -341,8 +341,12 @@ main {
 .hero-content {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     width: 100vw;
+    height: 700px;
+    padding: 15px;
+    gap: 80px;
 }
 
 .hero__info {
@@ -545,9 +549,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 30px;
-    padding: 10px;
 }
 
 .category {
@@ -685,7 +687,6 @@ main {
     align-items: center;
     gap: 60px;
     padding: 10px;
-    width: 100vw;
 }
 .products-offer h3 {
     font-size: 28px;

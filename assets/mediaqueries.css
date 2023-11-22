@@ -103,7 +103,7 @@
         padding: 15px;
     }
     .img-up {
-        height: 400px;
+        height: 600px;
         width: 300px;
         display: flex;
         justify-content: center;
@@ -112,7 +112,7 @@
         gap: 50px;
     }
     .img-down {
-        height: 400px;
+        height: 600px;
         width: 300px;
         display: flex;
         justify-content: center;
@@ -208,7 +208,7 @@
         align-items: center;
         gap: 20px;
         width: 100vw;
-        height: 100vh;
+        height: 600px;
         padding: 5px;
     }
     .img-up {
@@ -412,58 +412,14 @@
 
 }
 @media (max-width: 576px) {
-    .cart h3 {
-        font-size: 14px;
-    }
-    .cart-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 120px;
-        height: 200px;
-        gap: 20px;
-        background-color: #2323234e;
-        padding: 10px;
-        border-radius: 10px;
-    }
-    .cart-total {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-    .cart-total p {
-        font-size: 12px;
-    }
-    .cart-total span {
-        font-size: 12px;
-    }
-    .btn-buy-delete {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 30px;
-    }
-    .hero__info h1 {
-        font-size: 18px;
-    }
-    .button-hero a {
-        padding: 5px 5px;
-    }
-      .button-hero {
-          font-size: 14px;
-    }
     .hero-images {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
         width: 100vw;
-        height: 100vh;
+        height: 600px;
         padding: 5px;
     }
     .hero-img1 {
@@ -490,7 +446,7 @@
     }
     .hero-img3 {
         padding: 5px;
-        height: 150px;
+        height: 200px;
         width: 100px;
         background-image: url(./img/hero-img3.jpg);
         background-position: center;
@@ -511,22 +467,22 @@
         border-radius: 1rem;
     }
     .img-up {
-        height: 250px;
-        width: 100vw;
+        height: 400px;
+        width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        justify-content: space-around;
+        gap: 20px;
     }
     .img-down {
-        height: 250px;
-        width: 100vw;
+        height: 400px;
+        width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        justify-content: space-around;
+        gap: 20px;
     }
     .List-categories {
         display: flex;
@@ -551,10 +507,6 @@
          -webkit-user-select: none;
          touch-action: manipulation; 
      }
-
-    .active { 
-        border: 1px solid rgb(255, 215, 106);
-    }
      .container__card {
         display: flex;
         flex-direction: column;
@@ -592,7 +544,7 @@
     }
 
     .header__logo {
-        width: 30%;
+        width: 50%;
     }
     #hero {
         padding: 5px;
@@ -628,8 +580,6 @@
     .contact__mensaje--textarea a {
         width: 250px;
     }
-    .footer__container {
-        flex-wrap: wrap;
-    }
+    
 }
 }
