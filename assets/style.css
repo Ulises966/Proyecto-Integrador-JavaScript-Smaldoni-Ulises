@@ -135,11 +135,11 @@ header {
     align-items: center;
     position: absolute;
     top: 70px;
-    left: 50%;
+    left: 70%;
     right: 0%;
-    width: 50%;
+    width: 30%;
     height: 100vh;
-    gap: 30px;
+    gap: 20px;
     padding: 30px 30px;
     z-index: 2;
     backdrop-filter: blur(16px) saturate(200%);
@@ -328,7 +328,6 @@ main {
 #hero {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -342,9 +341,8 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    align-items: center;
-    width: 100vw;
-    height: 700px;
+    max-width: 100vw;
+    height: 100vh;
     padding: 15px;
     gap: 80px;
 }
@@ -494,7 +492,7 @@ main {
 #servicios {
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
+    max-width: 1200px;
     padding: 100px 20px;
     gap: 100px;
 }
@@ -594,8 +592,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100vh;
-    padding: 70px 0px;
+    max-width: 1200px;
+    padding: 70px 20px;
     gap: 100px;
 }
 #products h4 {
@@ -610,8 +608,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 100vw;
-    gap: 100px;
+    gap: 20px;
 }
 
 .container__card {
@@ -694,7 +691,7 @@ main {
 }
 
 .products-offer__container {
-    padding: 10px;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

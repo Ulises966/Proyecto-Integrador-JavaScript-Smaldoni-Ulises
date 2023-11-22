@@ -99,7 +99,7 @@
         align-items: center;
         gap: 50px;
         width: 100vh;
-        height: 100vh;
+        height: 600px;
         padding: 15px;
     }
     .img-up {
@@ -133,46 +133,8 @@
     .button-hero {
         font-size: 16px;
       }
-      .products-offer h3 {
-        font-size: 24px;
-    }
-    #products h4 {
-        font-size: 24px;
-    }
-    #servicios h2 {
-        font-size: 24px;
-    }
 }
 @media (max-width: 1070px) {
-
-    .hero-images {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        gap: 50px;
-        width: 100vh;
-        height: 100vh;
-        padding: 15px;
-    }
-    .img-up {
-        height: 400px;
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 50px;
-    }
-    .img-down {
-        height: 400px;
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 50px;
-    }
     .hero__info h1 {
         font-size: 20px;
     }
@@ -204,7 +166,7 @@
     .hero-images {
         display: flex;
         justify-content: center;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap: 20px;
         width: 100vw;
@@ -212,66 +174,22 @@
         padding: 5px;
     }
     .img-up {
-        height: 500px;
-        width: 300px;
+        height: 600px;
+        width: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 40px;
+        flex-direction: row;
+        gap: 50px;
     }
     .img-down {
-        height: 500px;
-        width: 300px;
+        height: 600px;
+        width: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 40px;
-    }
-    .hero-img1 {
-        padding: 5px;
-        height: 100px;
-        width: 150px;
-        background-image: url(./img/hero-img1.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-size: cover;
-        border-radius: 1rem;
-    }
-    .hero-img2 {
-        padding: 5px;
-        height: 120px;
-        width: 170px;
-        background-image: url(./img/hero-img2.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-size: cover;
-        border-radius: 1rem;
-    }
-    .hero-img3 {
-        padding: 5px;
-        height: 200px;
-        width: 100px;
-        background-image: url(./img/hero-img3.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-size: cover;
-        border-radius: 1rem;
-    }
-    .hero-img4 {
-        padding: 5px;
-        height: 100px;
-        width: 150px;
-        background-image: url(./img/hero-img4.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-size: cover;
-        border-radius: 1rem;
+        flex-direction: row;
+        gap: 50px;
     }
     
     .servicios__container {
@@ -341,7 +259,7 @@
         gap: 40px;
     }
     .hero__info h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
     .hero__info--container {
         gap: 20px;
@@ -371,27 +289,6 @@
     }   
 }
 @media (max-width: 768px) {
-    .btn-buy-delete {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 60px;
-    }
-    .hero-images {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        width: 100vw;
-        height: 100vh;
-        padding: 5px;
-    }
-
-    .hero__info h1 {
-        font-size: 20px;
-    }
 
     .button-hero a {
         padding: 10px 10px;
@@ -548,6 +445,12 @@
     }
     #hero {
         padding: 5px;
+    }
+    .hero__info {
+        gap: 30px;
+    }
+    .hero__info h1 {
+        font-size: 26px;
     }
     .hero__info--container {
         gap: 10px;
