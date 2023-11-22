@@ -471,6 +471,8 @@ const init = () => {
     overlay.addEventListener('click', overlayClick);
     navbarMenu.addEventListener('click', closeMenu);
     window.addEventListener('scroll', closeOnScroll);
+
+    
     window.addEventListener('DOMContentLoaded', renderCart);
     window.addEventListener('DOMContentLoaded', cartTotal);
     productsContainer.addEventListener('click', addProduct);
@@ -480,5 +482,7 @@ const init = () => {
     buttonDelete.addEventListener('click', deleteCart);
     disableBtn(buttonBuy);
     disableBtn(buttonDelete);
+
 };
 
+init();

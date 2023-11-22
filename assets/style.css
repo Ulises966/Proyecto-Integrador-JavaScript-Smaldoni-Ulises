@@ -699,7 +699,7 @@ main {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
     gap: 40px;
     border-top: dotted 10px #7bffab62;
     border-bottom: dotted 10px #7bffab62;
