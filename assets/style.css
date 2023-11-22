@@ -135,9 +135,9 @@ header {
     align-items: center;
     position: absolute;
     top: 70px;
-    left: 70%;
+    left: 50%;
     right: 0%;
-    width: 30%;
+    width: 50%;
     height: 100vh;
     gap: 20px;
     padding: 30px 30px;
