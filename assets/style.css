@@ -608,10 +608,10 @@ main {
 .products__container {
     display: flex;
     justify-content: center;
-    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    width: 100vw;
+    gap: 100px;
 }
 
 .container__card {
