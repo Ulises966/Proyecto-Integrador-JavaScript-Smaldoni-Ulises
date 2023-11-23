@@ -813,7 +813,7 @@ main {
 .contact__mensaje--textarea input:focus, textarea:focus {
     background-color: var(--bg-ph-focus);
 }
-.contact__mensaje--textarea a {
+.contact__mensaje--textarea button {
     cursor: pointer;
     display: flex;
     justify-content: center;

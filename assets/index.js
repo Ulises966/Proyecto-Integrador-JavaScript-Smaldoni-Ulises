@@ -15,6 +15,10 @@ const buttonBuy = document.querySelector('.buy');
 const buttonDelete = document.querySelector('.delete');
 const offerContainer = document.querySelector('.products-offer__container');
 
+const contactForm = document.getElementById('contactForm');
+const nameInput = document.getElementById('nombre');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('mensaje');
 
 
 
@@ -458,10 +462,86 @@ ProductosDestacados();
 
 
 
+// validacion de formulario en seccion contacto  
+
+
+const isEmpty = (input) => {
+    return !input.value.trim().length;
+}
+  
+const isEmailValid = (input) => {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(input.value.trim());
+}
+  
+const showError = (input, msg) => {
+    const formField = input.parentElement;
+    formField.classList.remove('success');
+    formField.classList.add('error');
+    const error = formField.querySelector("label + input, textarea");
+    error.style.display = 'block';
+    error.textContent = msg;
+}
+  
+const showSuccess = (input) => {
+    const formField = input.parentElement;
+    formField.classList.remove('error');
+    formField.classList.add('success');
+    const error = formField.querySelector("label + input, textarea");
+    error.textContent = '';
+}
+  
+const checkName = (input) => {
+    if (isEmpty(input)) {
+      showError(input, "Este campo es obligatorio");
+      return false;
+    }
+    showSuccess(input);
+    return true;
+}
+  
+const checkEmail = (input) => {
+    if (isEmpty(input)) {
+      showError(input, "Este campo es obligatorio");
+      return false;
+    }
+  
+    if (!isEmailValid(input)) {
+      showError(input, "El email no es válido");
+      return false;
+    }
+  
+    showSuccess(input);
+    return true;
+}
+  
+const checkMessage = (input) => {
+    if (isEmpty(input)) {
+      showError(input, "Este campo es obligatorio");
+      return false;
+    }
+    showSuccess(input);
+    return true;
+}
+  
+const validateForm = (e) => {
+    e.preventDefault();
+  
+    const isNameValid = checkName(nameInput);
+    const isEmailValid = checkEmail(emailInput);
+    const isMessageValid = checkMessage(messageInput);
+  
+    const isValidForm = isNameValid && isEmailValid && isMessageValid;
+  
+    if (isValidForm) {
+      alert('Formulario válido, puedes enviar la consulta');
+    }
+}
+
 
 
 const init = () => {
-    
+
     renderProducts(appState.products[appState.currentProductsIndex]);
     showMore.addEventListener('click', showMoreProducts);
     categoriesDiv.addEventListener('click', filter);
@@ -479,7 +559,16 @@ const init = () => {
     buttonDelete.addEventListener('click', deleteCart);
     disableBtn(buttonBuy);
     disableBtn(buttonDelete);
-    
+    contactForm.addEventListener('submit', validateForm);
+    nameInput.addEventListener('input', () => checkName(nameInput));
+    emailInput.addEventListener('input', () => checkEmail(emailInput));
+    messageInput.addEventListener('input', () => checkMessage(messageInput));
+  
 };
 
 init();
+
+
+
+
+
