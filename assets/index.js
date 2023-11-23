@@ -533,10 +533,16 @@ const validateForm = (e) => {
   
     const isValidForm = isNameValid && isEmailValid && isMessageValid;
   
-    if (isValidForm) {
+    if (!isValidForm) {
+      alert('Por favor, complete todos los campos obligatorios.');
+    } else {
       alert('Formulario válido, puedes enviar la consulta');
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';  
     }
-}
+  }
+  
 
 
 
@@ -559,6 +565,7 @@ const init = () => {
     buttonDelete.addEventListener('click', deleteCart);
     disableBtn(buttonBuy);
     disableBtn(buttonDelete);
+    
     contactForm.addEventListener('submit', validateForm);
     nameInput.addEventListener('input', () => checkName(nameInput));
     emailInput.addEventListener('input', () => checkEmail(emailInput));
