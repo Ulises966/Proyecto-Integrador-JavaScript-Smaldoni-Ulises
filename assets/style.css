@@ -757,6 +757,7 @@ main {
     align-items: center;
     padding: 70px 20px;
     gap: 200px;
+    width: 100vw;
 }
 .contact__content {
     display: flex;
