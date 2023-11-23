@@ -672,6 +672,10 @@ main {
     /* padding: 10px; */
 }
 .products-offer h3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     font-size: 28px;
     color: var(--title-secc);
 }
