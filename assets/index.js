@@ -461,6 +461,7 @@ ProductosDestacados();
 
 
 const init = () => {
+    
     renderProducts(appState.products[appState.currentProductsIndex]);
     showMore.addEventListener('click', showMoreProducts);
     categoriesDiv.addEventListener('click', filter);
@@ -478,7 +479,7 @@ const init = () => {
     buttonDelete.addEventListener('click', deleteCart);
     disableBtn(buttonBuy);
     disableBtn(buttonDelete);
-
+    
 };
 
 init();
