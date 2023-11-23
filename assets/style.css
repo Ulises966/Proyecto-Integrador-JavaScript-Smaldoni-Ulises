@@ -772,6 +772,8 @@ main {
 .contact__mensaje {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 .contact__mensaje h5 {
@@ -784,6 +786,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
